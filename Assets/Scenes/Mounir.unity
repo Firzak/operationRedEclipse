@@ -184,6 +184,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a36ff9b3380437541b4ad2e082bf0ee8, type: 2}
+  - {fileID: -876546973899608171, guid: 684a588697abacd4f8de9564278b6bd4, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -238,6 +239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 173313487}
   - component: {fileID: 173313486}
+  - component: {fileID: 173313488}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -272,6 +274,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &173313488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173313485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a1e218049908147bda8a6109d1b1a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 784618989960881195, guid: e64d175fe5fcc4345b77eec0246f9d86, type: 3}
 --- !u!1 &304449345
 GameObject:
   m_ObjectHideFlags: 0
