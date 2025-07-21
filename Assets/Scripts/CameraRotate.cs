@@ -3,48 +3,47 @@ using UnityEngine.InputSystem;
 
 public class CameraRotate : MonoBehaviour
 {
-    [SerializeField] private Transform target;      // Cible à suivre (le transform du joueur)
-    [SerializeField] private float distance = 5f;   // Distance caméra-joueur (modifiable dans l’inspector)
-    [SerializeField] private float rotationSpeed = 150f; // Vitesse de rotation de la caméra (sensibilité)
-    [SerializeField] private float minPitch = -20f; // Angle de pitch minimum (en degrés, regard vers le haut)
-    [SerializeField] private float maxPitch = 80f;  // Angle de pitch maximum (en degrés, regard vers le bas)
+    [SerializeField] private Transform target;      // le joueur
+    [SerializeField] private float distance = 5f;   // dist. réglable
+    [SerializeField] private float rotationSpeed = 150f;
+    [SerializeField] private float minPitch = -10f; // regarde vers le bas max
+    [SerializeField] private float maxPitch =  60f; // regarde vers le haut max
 
-    private float yaw;   // Angle de rotation horizontale (autour de Y)
-    private float pitch; // Angle de rotation verticale (autour de X)
+    private float yaw;   // rotation horizontale
+    private float pitch; // rotation verticale
 
     private GetInputScript inputScript;
 
     void Start()
     {
-        // Initialisation des angles à la rotation actuelle de la caméra
-        Vector3 angles = transform.eulerAngles;
-        pitch = angles.x;
-        yaw = angles.y;
-        // Recherche du script d'entrée (présent sur le même objet que le joueur)
-        if (target != null) 
+        // Récupère inputScript sur le joueur
+        if (target != null)
             inputScript = target.GetComponent<GetInputScript>();
+
+        // initialise yaw/pitch en convertissant correctement les EulerAngles
+        Vector3 angles = transform.eulerAngles;
+        yaw   = angles.y;
+        pitch = angles.x > 180f ? angles.x - 360f : angles.x;
     }
 
     void LateUpdate()
     {
         if (target == null || inputScript == null) return;
 
-        // Récupère l'input de regard (Look) du joueur
-        Vector2 lookInput = inputScript.LookInput;
-        float lookX = lookInput.x;
-        float lookY = lookInput.y;
+        Vector2 look = inputScript.LookInput;
+        yaw   += look.x * rotationSpeed * Time.deltaTime;
+        pitch -= look.y * rotationSpeed * Time.deltaTime;
 
-        // Calcul des nouveaux angles de rotation de la caméra
-        yaw   += lookX * rotationSpeed * Time.deltaTime;   // incrémente l'angle horizontal en fonction de l'entrée X
-        pitch -= lookY * rotationSpeed * Time.deltaTime;   // décrémente l'angle vertical en fonction de l'entrée Y (on inverse pour que Y positif = regarder vers le haut)
-        pitch = Mathf.Clamp(pitch, minPitch, maxPitch);    // limite l'angle vertical entre minPitch et maxPitch
+        // **CLAMP** du pitch pour ne pas dépasser sol/plafond
+        pitch = Mathf.Clamp(pitch, minPitch, maxPitch);
 
-        // Application de la rotation orbitale autour du joueur
-        Quaternion rotation = Quaternion.Euler(pitch, yaw, 0f);
-        Vector3 offset = new Vector3(0f, 0f, -distance);
-        // Positionne la caméra à la distance voulue autour de la cible selon les angles calculés
-        transform.position = target.position + rotation * offset;
-        // Oriente la caméra pour qu'elle regarde la cible (le joueur)
-        transform.LookAt(target.position);
+        // construit la rotation finale à partir du yaw/pitch
+        Quaternion rot = Quaternion.Euler(pitch, yaw, 0f);
+
+        // calcule la position : derrière le joueur à la bonne distance
+        Vector3 pos = target.position + rot * Vector3.back * distance;
+
+        // applique *ensemble* position + rotation
+        transform.SetPositionAndRotation(pos, rot);
     }
 }

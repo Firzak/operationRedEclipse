@@ -768,8 +768,8 @@ MonoBehaviour:
   target: {fileID: 304449351}
   distance: 5
   rotationSpeed: 15
-  minPitch: -20
-  maxPitch: 40
+  minPitch: -10
+  maxPitch: 60
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
