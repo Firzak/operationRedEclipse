@@ -40,10 +40,14 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
+<<<<<<< Updated upstream
     - _Scale: 1.05
     - _Scale_X: 1.03
     - _Scale_Y: 1.03
     - _Scale_Z: 1.01
+=======
+    - _Scale: 1.03
+>>>>>>> Stashed changes
     m_Colors:
     - _Color: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
