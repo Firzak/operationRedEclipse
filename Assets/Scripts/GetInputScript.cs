@@ -6,10 +6,12 @@ public class GetInputScript : MonoBehaviour
     [SerializeField] private InputActionReference moveAction;
     [SerializeField] private InputActionReference lookAction;
     [SerializeField] private InputActionReference switchAction;
+    [SerializeField] private InputActionReference interactAction;
     
     public Vector2 MoveInput { get; private set; }  // Valeur courante de l'input de déplacement
     public Vector2 LookInput { get; private set; }  // Valeur courante de l'input de regard
     public InputActionReference SwitchAction => switchAction; // Action de changement de monde
+    public InputActionReference InteractAction => interactAction; // Action d'interaction
 
     private void OnEnable()
     {
@@ -17,15 +19,8 @@ public class GetInputScript : MonoBehaviour
         if (moveAction != null) moveAction.action.Enable();
         if (lookAction != null) lookAction.action.Enable();
         if (switchAction != null) switchAction.action.Enable();
+        if (interactAction != null) interactAction.action.Enable();
     }
-
-//    private void OnDisable()
-//    {
-//        // Désactive les actions d'input pour éviter les fuites ou lectures indésirables
-//        if (moveAction != null) moveAction.action.Disable();
-//        if (lookAction != null) lookAction.action.Disable();
-//        if (switchAction != null) switchAction.action.Disable();
-//    }
 
     void Update()
     {
@@ -33,10 +28,16 @@ public class GetInputScript : MonoBehaviour
         MoveInput = moveAction != null ? moveAction.action.ReadValue<Vector2>() : Vector2.zero;
         LookInput = lookAction != null ? lookAction.action.ReadValue<Vector2>() : Vector2.zero;
         // Vérifie si l'action de changement de monde est déclenchée
-        if (switchAction != null && switchAction.action.triggered)
+        if (switchAction && switchAction.action.triggered)
         {
             // Appelle la méthode pour changer de monde
             FindFirstObjectByType<WorldManager>().SwitchWorld();
+        }
+        // Vérifie si l'action d'interaction est déclenchée
+        if (interactAction && interactAction.action.triggered)
+        {
+            // Appelle la méthode d'interaction
+            GetComponent<InteractionManager>().Interact();
         }
     }
 }
