@@ -4,7 +4,6 @@ using UnityEngine.InputSystem;
 public class CameraRotate : MonoBehaviour
 {
     [SerializeField] private Transform target;      // le joueur
-    [SerializeField] private float distance = 5f;   // dist. réglable
     [SerializeField] private float rotationSpeed = 150f;
     [SerializeField] private float minPitch = -10f; // regarde vers le bas max
     [SerializeField] private float maxPitch =  60f; // regarde vers le haut max
@@ -41,9 +40,9 @@ public class CameraRotate : MonoBehaviour
         Quaternion rot = Quaternion.Euler(pitch, yaw, 0f);
 
         // calcule la position : derrière le joueur à la bonne distance
-        Vector3 pos = target.position + rot * Vector3.back * distance;
+        // Vector3 pos = target.position + rot * Vector3.back * distance;
 
         // applique *ensemble* position + rotation
-        transform.SetPositionAndRotation(pos, rot);
+        transform.SetPositionAndRotation(transform.position, rot);
     }
 }

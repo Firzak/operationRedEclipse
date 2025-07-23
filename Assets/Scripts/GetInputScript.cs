@@ -15,11 +15,7 @@ public class GetInputScript : MonoBehaviour
 
     private void OnEnable()
     {
-        // Active les actions d'input lorsque cet objet est activé
-        if (moveAction != null) moveAction.action.Enable();
-        if (lookAction != null) lookAction.action.Enable();
-        if (switchAction != null) switchAction.action.Enable();
-        if (interactAction != null) interactAction.action.Enable();
+        Enable();
     }
 
     void Update()
@@ -39,5 +35,20 @@ public class GetInputScript : MonoBehaviour
             // Appelle la méthode d'interaction
             GetComponent<InteractionManager>().Interact();
         }
+    }
+    
+    public void Disable()
+    {
+        if (moveAction != null) moveAction.action.Disable();
+        if (lookAction != null) lookAction.action.Disable();
+        if (switchAction != null) switchAction.action.Disable();
+    }
+
+    public void Enable()
+    {
+        if (moveAction != null) moveAction.action.Enable();
+        if (lookAction != null) lookAction.action.Enable();
+        if (switchAction != null) switchAction.action.Enable();
+        if (interactAction != null) interactAction.action.Enable();
     }
 }
