@@ -13,7 +13,15 @@ public class DoorInteract : Interactable
         }
         else
         {
-            
+            Debug.Log("OnInteract appelé sur la porte !");
+            if (CodePanel != null)
+            {
+                CodePanel.SetActive(true);
+            }
+            else
+            {
+                Debug.LogWarning("CodePanel n'est pas assigné dans l'inspecteur !");
+            }
         }
     }
 }
