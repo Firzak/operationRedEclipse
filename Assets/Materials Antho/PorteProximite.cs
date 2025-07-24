@@ -29,6 +29,10 @@ public class PorteProximite : Interactable
 
     public override void OnInteract()
     {
+        if (!FindFirstObjectByType<ProgressManager>().key)
+        {
+            return;
+        }
         Debug.Log("OnInteract appelé sur la porte !");
         estOuverte = !estOuverte;
     }

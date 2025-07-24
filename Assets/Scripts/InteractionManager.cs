@@ -4,7 +4,6 @@ using UnityEngine;
 public class InteractionManager : MonoBehaviour
 {
     [SerializeField] private float interactionDistance = 3f;
-    [SerializeField] private LayerMask interactableLayer;
     [SerializeField] private GameObject interactOrigin;
 
     private Renderer lastRenderer = null;
@@ -24,7 +23,8 @@ public class InteractionManager : MonoBehaviour
         Vector3 direction = interactOrigin.transform.forward;
 
         Debug.DrawRay(origin, direction * interactionDistance, Color.green, 0.1f);
-
+        // Utilise un LayerMask pour ne toucher que les avec le même layer que le player
+        LayerMask interactableLayer = gameObject.layer == LayerMask.NameToLayer("Présent") ? LayerMask.GetMask("Présent") : LayerMask.GetMask("Futur");
         if (Physics.Raycast(origin, direction, out hit, interactionDistance, interactableLayer))
         {
             Interactable interactable = hit.collider.GetComponent<Interactable>();
@@ -79,6 +79,7 @@ public class InteractionManager : MonoBehaviour
         Vector3 direction = interactOrigin.transform.forward;
 
         Debug.DrawRay(origin, direction * interactionDistance, Color.red, 10f);
+        LayerMask interactableLayer = gameObject.layer == LayerMask.NameToLayer("Présent") ? LayerMask.GetMask("Présent") : LayerMask.GetMask("Futur");
 
         if (Physics.Raycast(origin, direction, out hit, interactionDistance, interactableLayer))
         {
