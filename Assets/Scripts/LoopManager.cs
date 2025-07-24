@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class LoopManager : MonoBehaviour
 {
     float time = 0;
-    float timeLimit = 1f; // Durée de la boucle en minutes
+    float timeLimit = 5f; // Durée de la boucle en minutes
     
     [SerializeField] GameObject explosionPrefab; // Préfabriqué de l'explosion
 
@@ -25,7 +25,7 @@ public class LoopManager : MonoBehaviour
     
     void EndLoop()
     {
-        Instantiate(explosionPrefab, Vector3.zero, Quaternion.identity);
+        Instantiate(explosionPrefab, new Vector3(32, 2, 55), Quaternion.identity);
         
         Invoke("StartLoop", 5f);
     }
@@ -33,7 +33,7 @@ public class LoopManager : MonoBehaviour
     void StartLoop()
     {
         // Charger les 2 scènes présent et futur
-        SceneManager.LoadScene("Mounir");
+        SceneManager.LoadScene("Hall");
         SceneManager.LoadSceneAsync("Mounir 1", LoadSceneMode.Additive);
     }
 }
