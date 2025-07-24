@@ -4,7 +4,6 @@ using UnityEngine.InputSystem;
 public class MoveScript : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5f;         // Vitesse de déplacement du personnage
-    [SerializeField] private Transform cameraTransform;    // Transform de la caméra (pour connaitre l'orientation de la vue)
     
     private GetInputScript inputScript;
     private CharacterController controller;  // Composant optionnel pour la collision (peut être null si non utilisé)
@@ -22,13 +21,9 @@ public class MoveScript : MonoBehaviour
         float inputX = moveInput.x;   // composante gauche/droite
         float inputY = moveInput.y;   // composante avant/arrière
 
-        // Aligne toujours l'orientation du joueur sur la direction horizontale de la caméra
-        if (cameraTransform != null)
-        {
-            Vector3 currentEuler = transform.eulerAngles;
-            currentEuler.y = cameraTransform.eulerAngles.y;
-            transform.eulerAngles = currentEuler;
-        }
+        Vector3 currentEuler = transform.eulerAngles;
+        currentEuler.y = Camera.main.transform.eulerAngles.y;
+        transform.eulerAngles = currentEuler;
 
         // Calcule la direction de déplacement dans le plan horizontal, en tenant compte de l'orientation du joueur (qui suit la caméra)
         Vector3 moveDir = transform.forward * inputY + transform.right * inputX;

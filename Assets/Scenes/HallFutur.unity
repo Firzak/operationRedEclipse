@@ -49925,6 +49925,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &565082616 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8a620114e2fd60541abe44dafebe870a, type: 3}
+  m_PrefabInstance: {fileID: 1506912941}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &565082620
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565082616}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.020020107, y: 0.0039840285, z: 0.020008175}
+  m_Center: {x: 0.0000022500762, y: 0.00007836994, z: -0.0000046147165}
 --- !u!1 &565308015
 GameObject:
   m_ObjectHideFlags: 0
@@ -70831,7 +70857,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 7d7460903d20ce34bb5f6b3d69ac30a3, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
@@ -89377,7 +89403,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8a620114e2fd60541abe44dafebe870a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 565082620}
   m_SourcePrefab: {fileID: 100100000, guid: 8a620114e2fd60541abe44dafebe870a, type: 3}
 --- !u!1 &1510158966 stripped
 GameObject:
@@ -115318,7 +115347,7 @@ GameObject:
   - component: {fileID: 1896499770}
   m_Layer: 7
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: FuturCanvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115339,7 +115368,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 183
 --- !u!114 &1896499771
 MonoBehaviour:
   m_ObjectHideFlags: 0
