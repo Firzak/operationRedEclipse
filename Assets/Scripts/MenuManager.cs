@@ -5,7 +5,8 @@ public class MenuManager : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("Mounir");
+        SceneManager.LoadScene("Hall");
+        SceneManager.LoadSceneAsync("Bastien", LoadSceneMode.Additive);
     }
     
     public void QuitGame()
@@ -27,7 +28,6 @@ public class MenuManager : MonoBehaviour
     
     public void OpenCredits()
     {
-        // Logique pour fermer les paramètres du jeu
-        Debug.Log("Fermer les paramètres du jeu");
+        SceneManager.LoadScene("Credits");
     }
 }

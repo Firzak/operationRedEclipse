@@ -2082,7 +2082,7 @@ MonoBehaviour:
   canvasInteraction: {fileID: 795665680}
   screenCanvas: {fileID: 268921695}
   text: {fileID: 2102671026}
-  textShowing: 
+  textShowing: {fileID: 0}
 --- !u!1 &40614749
 GameObject:
   m_ObjectHideFlags: 0
@@ -2700,7 +2700,7 @@ MonoBehaviour:
   canvasInteraction: {fileID: 795665680}
   screenCanvas: {fileID: 268921695}
   text: {fileID: 2102671026}
-  textShowing: 
+  textShowing: {fileID: 0}
 --- !u!1 &110495367
 GameObject:
   m_ObjectHideFlags: 0
@@ -45357,7 +45357,7 @@ MonoBehaviour:
   canvasInteraction: {fileID: 795665680}
   screenCanvas: {fileID: 324387909}
   text: {fileID: 324387908}
-  textShowing: 
+  textShowing: {fileID: 0}
 --- !u!65 &268921697
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45379,6 +45379,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &269651458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 269651459}
+  m_Layer: 6
+  m_Name: Tp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &269651459
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269651458}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0.7071068, w: 0}
+  m_LocalPosition: {x: -0.28472158, y: -0.62008905, z: -0.005099869}
+  m_LocalScale: {x: 0.66666675, y: 0.5000002, z: 0.76923114}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1506912944}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &302950211
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45867,7 +45898,7 @@ MonoBehaviour:
   canvasInteraction: {fileID: 795665680}
   screenCanvas: {fileID: 324387909}
   text: {fileID: 324387908}
-  textShowing: 
+  textShowing: {fileID: 0}
 --- !u!65 &324387911
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47299,7 +47330,7 @@ MonoBehaviour:
   canvasInteraction: {fileID: 795665680}
   screenCanvas: {fileID: 268921695}
   text: {fileID: 2102671026}
-  textShowing: 
+  textShowing: {fileID: 0}
 --- !u!1 &445841023
 GameObject:
   m_ObjectHideFlags: 0
@@ -47503,7 +47534,7 @@ MonoBehaviour:
   canvasInteraction: {fileID: 795665680}
   screenCanvas: {fileID: 268921695}
   text: {fileID: 0}
-  textShowing: 
+  textShowing: {fileID: 0}
 --- !u!1 &473838325
 GameObject:
   m_ObjectHideFlags: 0
@@ -51025,7 +51056,7 @@ MonoBehaviour:
   canvasInteraction: {fileID: 795665680}
   screenCanvas: {fileID: 268921695}
   text: {fileID: 2102671026}
-  textShowing: 
+  textShowing: {fileID: 0}
 --- !u!1 &553636029
 GameObject:
   m_ObjectHideFlags: 0
@@ -51707,7 +51738,7 @@ MonoBehaviour:
   canvasInteraction: {fileID: 795665680}
   screenCanvas: {fileID: 324387909}
   text: {fileID: 324387908}
-  textShowing: 
+  textShowing: {fileID: 0}
 --- !u!65 &590905176
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -53132,7 +53163,7 @@ MonoBehaviour:
   canvasInteraction: {fileID: 795665680}
   screenCanvas: {fileID: 590905174}
   text: {fileID: 816717307}
-  textShowing: 
+  textShowing: {fileID: 0}
 --- !u!65 &716178863
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -53273,7 +53304,7 @@ MonoBehaviour:
   canvasInteraction: {fileID: 795665680}
   screenCanvas: {fileID: 324387909}
   text: {fileID: 324387908}
-  textShowing: 
+  textShowing: {fileID: 0}
 --- !u!65 &716543194
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54860,7 +54891,7 @@ MonoBehaviour:
   canvasInteraction: {fileID: 795665680}
   screenCanvas: {fileID: 268921695}
   text: {fileID: 2102671026}
-  textShowing: 
+  textShowing: {fileID: 0}
 --- !u!1001 &833499724
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54974,7 +55005,7 @@ MonoBehaviour:
   canvasInteraction: {fileID: 795665680}
   screenCanvas: {fileID: 268921695}
   text: {fileID: 0}
-  textShowing: 
+  textShowing: {fileID: 0}
 --- !u!1 &841859531
 GameObject:
   m_ObjectHideFlags: 0
@@ -72594,7 +72625,7 @@ MonoBehaviour:
   canvasInteraction: {fileID: 795665680}
   screenCanvas: {fileID: 324387909}
   text: {fileID: 324387908}
-  textShowing: 
+  textShowing: {fileID: 4900000, guid: 6a3f6dec4a30c214682ef3ee1cd06fe7, type: 3}
 --- !u!65 &964803339
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -72873,7 +72904,7 @@ MonoBehaviour:
   canvasInteraction: {fileID: 795665680}
   screenCanvas: {fileID: 268921695}
   text: {fileID: 2102671026}
-  textShowing: 
+  textShowing: {fileID: 0}
 --- !u!1001 &977189466
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75273,7 +75304,7 @@ MonoBehaviour:
   canvasInteraction: {fileID: 795665680}
   screenCanvas: {fileID: 268921695}
   text: {fileID: 2102671026}
-  textShowing: 
+  textShowing: {fileID: 0}
 --- !u!1001 &1197697430
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75810,7 +75841,7 @@ MonoBehaviour:
   canvasInteraction: {fileID: 795665680}
   screenCanvas: {fileID: 324387909}
   text: {fileID: 324387908}
-  textShowing: 
+  textShowing: {fileID: 4900000, guid: 273366edf09f10f4f99a600eab75cc51, type: 3}
 --- !u!65 &1231630507
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -77134,7 +77165,7 @@ MonoBehaviour:
   canvasInteraction: {fileID: 795665680}
   screenCanvas: {fileID: 324387909}
   text: {fileID: 324387908}
-  textShowing: 
+  textShowing: {fileID: 0}
 --- !u!65 &1271236637
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -77765,7 +77796,7 @@ MonoBehaviour:
   canvasInteraction: {fileID: 795665680}
   screenCanvas: {fileID: 268921695}
   text: {fileID: 2102671026}
-  textShowing: 
+  textShowing: {fileID: 0}
 --- !u!1 &1301446800 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6766955937536820892, guid: 9f3633c625b5bf945a171816ca0b72ca, type: 3}
@@ -90140,6 +90171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   codeInputField: {fileID: 445841024}
+  correctCode: 2806
 --- !u!1001 &1314655500
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -90352,7 +90384,7 @@ MonoBehaviour:
   canvasInteraction: {fileID: 795665680}
   screenCanvas: {fileID: 324387909}
   text: {fileID: 324387908}
-  textShowing: 
+  textShowing: {fileID: 0}
 --- !u!65 &1314868857
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -92342,7 +92374,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8a620114e2fd60541abe44dafebe870a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 269651459}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8a620114e2fd60541abe44dafebe870a, type: 3}
       insertIndex: -1
@@ -92377,6 +92412,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.020020107, y: 0.0039840285, z: 0.020008175}
   m_Center: {x: 0.0000022500762, y: 0.00007836994, z: -0.0000046147165}
+--- !u!4 &1506912944 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8a620114e2fd60541abe44dafebe870a, type: 3}
+  m_PrefabInstance: {fileID: 1506912941}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1506912947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92391,6 +92431,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvasInteraction: {fileID: 795665680}
   CodePanel: {fileID: 1312987178}
+  codeLevel: 1
+  tpTransform: {fileID: 269651459}
 --- !u!1 &1510158966 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6766955937536820892, guid: 9f3633c625b5bf945a171816ca0b72ca, type: 3}
@@ -117740,7 +117782,7 @@ MonoBehaviour:
   canvasInteraction: {fileID: 795665680}
   screenCanvas: {fileID: 268921695}
   text: {fileID: 2102671026}
-  textShowing: 
+  textShowing: {fileID: 0}
 --- !u!1001 &1796942501
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -118275,7 +118317,7 @@ MonoBehaviour:
   canvasInteraction: {fileID: 795665680}
   screenCanvas: {fileID: 268921695}
   text: {fileID: 2102671026}
-  textShowing: 
+  textShowing: {fileID: 0}
 --- !u!1 &1857033684
 GameObject:
   m_ObjectHideFlags: 0
@@ -120334,7 +120376,7 @@ MonoBehaviour:
   canvasInteraction: {fileID: 795665680}
   screenCanvas: {fileID: 268921695}
   text: {fileID: 2102671026}
-  textShowing: 
+  textShowing: {fileID: 0}
 --- !u!1 &2054284229
 GameObject:
   m_ObjectHideFlags: 0
@@ -121259,7 +121301,7 @@ MonoBehaviour:
   canvasInteraction: {fileID: 795665680}
   screenCanvas: {fileID: 324387909}
   text: {fileID: 324387908}
-  textShowing: 
+  textShowing: {fileID: 0}
 --- !u!54 &2109192599
 Rigidbody:
   m_ObjectHideFlags: 0

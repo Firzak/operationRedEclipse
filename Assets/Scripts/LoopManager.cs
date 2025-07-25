@@ -35,5 +35,7 @@ public class LoopManager : MonoBehaviour
         // Charger les 2 scènes présent et futur
         SceneManager.LoadScene("Hall");
         SceneManager.LoadSceneAsync("HallFutur", LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync("Bastien", LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync("Futur alternatif", LoadSceneMode.Additive);
     }
 }
