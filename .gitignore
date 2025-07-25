@@ -103,3 +103,4 @@ InitTestScene*.unity*
 
 # Ignore JetBrains Rider solution files
 .idea/
+.vsconfig
