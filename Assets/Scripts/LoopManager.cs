@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class LoopManager : MonoBehaviour
 {
     float time = 0;
-    float timeLimit = 5f; // Durée de la boucle en minutes
+    float timeLimit = 3f; // Durée de la boucle en minutes
     
     [SerializeField] GameObject explosionPrefab; // Préfabriqué de l'explosion
 
